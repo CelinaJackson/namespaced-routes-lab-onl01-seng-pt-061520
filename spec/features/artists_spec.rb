@@ -8,10 +8,10 @@ describe "artists", type: :feature do
   end
 
   describe "GET /artists" do
-    it "links to artists songs path" do
-      visit artists_path
-      expect(page).to have_link(@artist.name, href: artist_songs_path(@artist))
-    end
+    # it "links to artists songs path" do
+    #   visit artists_path
+    #   expect(page).to have_link(@artist.name, href: artist_songs_path(@artist))
+    # end
 
   end
 

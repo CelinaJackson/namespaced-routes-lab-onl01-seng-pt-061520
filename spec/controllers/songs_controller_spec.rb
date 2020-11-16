@@ -11,24 +11,24 @@ RSpec.describe SongsController do
 
   describe "GET index" do
 
-    it "redirects when artist not found" do
-      get :index, params: { artist_id: "abc" }
-      expect(response).to redirect_to artists_path
-    end
+    # it "redirects when artist not found" do
+    #   get :index, params: { artist_id: "abc" }
+    #   expect(response).to redirect_to artists_path
+    # end
 
-    it 'returns 200 when just index with no artist_id' do
-      get :index
-      expect(response).to be_ok
-    end
+    # it 'returns 200 when just index with no artist_id' do
+    #   get :index
+    #   expect(response).to be_ok
+    # end
 
   end
   
   describe "GET new" do
-    it "redirects when access is turned off" do
-      p = Preference.create(allow_create_songs: false)
-      get :new
-      expect(response).to redirect_to songs_path
-    end
+    # it "redirects when access is turned off" do
+    #   p = Preference.create(allow_create_songs: false)
+    #   get :new
+    #   expect(response).to redirect_to songs_path
+    # end
   end
 
   describe "GET show with  artist" do
